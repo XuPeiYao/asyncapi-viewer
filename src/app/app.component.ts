@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import "@asyncapi/web-component/lib/asyncapi-web-component";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'asyncapi-viewer';
+  public schema:any
+
+  public getConfig(): any {
+    return (window as any).config;
+  }
+  public getSchemaUrl() :string{
+    return (window as any).schemaUrl;
+  }
+
+  public getCssPath() :string{
+    return (window as any).cssPath;
+  }
 }

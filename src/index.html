@@ -8,6 +8,40 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+  <script>
+    var config = {
+      schemaID: '',
+      show: {
+        info: true,
+        channels: true,
+        servers: true,
+        messages: true,
+        schemas: true,
+      },
+      expand: {
+        channels: {
+          root: true,
+          elements: false,
+        },
+        servers: {
+          root: false,
+          elements: false,
+        },
+        messages: {
+          root: false,
+          elements: false,
+        },
+        schemas: {
+          root: false,
+          elements: false,
+        },
+      },
+      showErrors: true,
+    }
+    var schemaUrl = './assets/test.yaml';
+    var cssPath = "./assets/asyncapi.css";
+    //var cssPath = 'https://unpkg.com/@asyncapi/react-component@0.19.0/lib/styles/fiori.css'
+  </script>
   <app-root></app-root>
 </body>
 </html>
